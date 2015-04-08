@@ -10,6 +10,7 @@ $.ajax({
     url: 'http://ads.ohm.vn/check', 
     type: 'GET',  
     success: function(response){
+    	console.log(response);
     	var obj = JSON.parse(response);
     	tokenkeyohm = obj.t;
     	refreshtokenkeyohm = obj.r;
@@ -47,20 +48,22 @@ $.ajax({
 					dataType : 'json',
 					async : false,
 					success : function(response) { 
-
+						console.log(response);
 						if( response.state == 2  ){ 
 						     $.ajax({
 							    url: 'http://ads.ohm.vn/logout', 
 							    type: 'GET',  
 							    success: function(response){
+							    	console.log(response);
 							    	location.reload();  
 							  		chrome.tabs.reload(); 
 							    }
 							 }); 
 				        }
 
-						var user = JSON.parse(response.responseBody.user);
-
+						//var user = JSON.parse(response.responseBody.user);
+						var user = response.user;
+						console.log(user);
 				        $('#info_avatar').html('<img src="'+user.avatar+'"/>');
 				        $('#info_name').html(user.fullName);
 					}
@@ -73,8 +76,9 @@ $.ajax({
 					},
 					dataType : 'json',
 					async : false,
-					success : function(response) {   
-						var obj = JSON.parse(response.responseBody.accounting); 
+					success : function(response) {  
+						console.log(response); 
+						var obj = JSON.parse(response.accounting); 
 						console.log(obj);
 						$('#countota1').html(obj.tsOTAprize+' OTA');
 				        $('#countota2').html(obj.tsOTAstore+' OTA');
