@@ -1,0 +1,97 @@
+<html>
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Kính soi OTA</title> 
+    <link rel="stylesheet" href="../css/bt/css/bootstrap.css" media="all" />
+    <link rel="stylesheet" href="../css/style.css" media="all" />
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script> 
+    
+    <link href="../chat/static/css/ChatBox.css" rel="stylesheet"/>
+    <link href="../chat/static/css/Emotion.css" rel="stylesheet"/>
+    <link href="../chat/static/css/Icon-loading.css" rel="stylesheet"/> 
+ 
+
+  </head>
+  <body>
+    <div id="loading"></div>
+    <div class="OHMlogin">
+      
+      <p class="bg-info">  Extension này được dùng để khai thác OTA của OHM. Hãy đăng nhập hoặc đăng ký vào hệ thống của OHM để có thể nhận được OTA
+       </p>
+         <div class="form-group"> 
+            <button type="button" class="btn btn-info" id="btnlogin">Đăng nhập</button> 
+            <button type="button" class="btn btn-warning" id="btnregister">Đăng ký</button> 
+        </div>
+ 
+
+    </div>
+
+
+    <div class="main OHMuserpanel">  
+        <div class="pannel_head clearfix">
+          <div class="left"> 
+            <div class="option">
+                  <span id="vohieu">Vô hiệu kính</span> 
+                  <span id="kichhoat">Kích hoạt kính</span>    
+            </div> 
+
+           
+
+          </div>
+          <div class="right">
+            <a href="http://account.ohm.vn/userinfo" target="_black" /><span id="info_avatar"></span></a>
+            <a href="http://account.ohm.vn/userinfo" target="_black" /><span id="info_name"></span></a>
+            <!--
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+            -->
+            
+            <a href="#" id="btnlogout">Đăng xuất</a>
+          </div> 
+        </div>  
+      <div class="pannel_ota clearfix">
+       <!--  <iframe src="http://chat.ohm.vn" width="700" height="500" frameborder="0" name="FRAME"></iframe> -->
+        <div class="col-xs-4"> 
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">OTA quay thưởng</h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="showota" id="countota1"></span>
+                                    <div class="alert alert-info" role="alert">Danh sách ô tri ân có được trong quá trình xem, đọc...các bài báo, các sản phẩm. Mã tri ân này sẽ được quay thưởng hàng tháng với giải thưởng 1 tỷ VNĐ.</div>
+                                  </div>
+                                </div>
+        </div>
+        <div class="col-xs-4">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">OTA lưu trữ</h3>
+                                  </div>
+                                  <div class="panel-body">
+                                   <span class="showota" id="countota2"></span>
+                                    <div class="alert alert-info" role="alert">Danh sách ô tri ân này được lưu trữ, ô tri ân này có thể chuyển sang quay thưởng, chuyển sang phân phối hoặc chuyển sang cho thành viên khác.</div>
+                                  </div>
+                                </div>
+        </div>
+        <div class="col-xs-4">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">OTA phân phối</h3>
+                                  </div>
+                                  <div class="panel-body">
+                                   <span class="showota" id="countota3"></span>
+                                    <div class="alert alert-info" role="alert">Danh sách ô tri ân phân phối chỉ được sử dụng để giao dịch, không có chức năng quay thưởng.</div>
+                                  </div>
+                                </div>
+        </div> 
+      </div> 
+      <div class="bottom_navigation"> 
+        <a href="http://account.ohm.vn/userinfo" target="_black">Thông tin cá nhân</a>   
+        <a href="http://account.ohm.vn/totalota" target="_black">Quản lý OTA</a> 
+      </div> 
+
+    </div>  
+    <script type="text/javascript" src="../js/popup.js"></script>
+  </body>
+</html>
