@@ -47,6 +47,19 @@ $.ajax({
 					},
 					dataType : 'json',
 					async : false,
+					statusCode: {
+					    403: function() {
+					      	$.ajax({
+							    url: 'http://ads.ohm.vn/logout', 
+							    type: 'GET',  
+							    success: function(response){
+							    	console.log(response);
+							    	location.reload();  
+							  		chrome.tabs.reload(); 
+							    }
+							 });
+					    }
+					},
 					success : function(response) { 
 						console.log(response);
 						if( response.state == 2  ){ 
@@ -76,13 +89,31 @@ $.ajax({
 					},
 					dataType : 'json',
 					async : false,
+					statusCode: {
+					    403: function() {
+					      	$.ajax({
+							    url: 'http://ads.ohm.vn/logout', 
+							    type: 'GET',  
+							    success: function(response){
+							    	console.log(response);
+							    	location.reload();  
+							  		chrome.tabs.reload(); 
+							    }
+							 });
+					    }
+					},
 					success : function(response) {  
 						console.log(response); 
 						var obj = JSON.parse(response.accounting); 
 						console.log(obj);
-						$('#countota1').html(obj.tsOTAprize+' OTA');
-				        $('#countota2').html(obj.tsOTAstore+' OTA');
-				        $('#countota3').html(obj.tsOTAdeal+' OTA');
+
+						var ota1 = $.number(obj.tsOTAprize); 
+						var ota2 = $.number(obj.tsOTAstore); 
+						var ota3 = $.number(obj.tsOTAdeal); 
+
+						$('#countota1').html(ota1+' OTA');
+				        $('#countota2').html(ota2+' OTA');
+				        $('#countota3').html(ota3+' OTA');
 					}
 				});
 
