@@ -354,6 +354,7 @@ function openPicker() {
 }
 
 function checkCookie() {
+	OhmJquery("head").append('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
 	if(getCookie(nameCheckOhm)=="") {
 		setCookie(nameCheckOhm, "on", 30*24*60*60*1000);
 	}
@@ -402,16 +403,16 @@ function checkCookie() {
 		OhmJquery("body").append("<div style='position: fixed;right: 10px;top:10px;cursor: pointer;z-index:999999;' id='ohm_exit'>" +
 				"<img style='float:right;margin-left:20px;' src='"+urlOhm+"images/ohm.png' width='28' onclick='toolbarOhm()'/>" +
 				"<div style='display:none;float:left;' id='toolbar-ohm'>" +
-					"<ul class='danhmuc'>" +
-						"<li>" +
-							"<div class='avatar' id='avatarOhm'>" +
+					"<ul class='danhmuc'>"
+					 //   + "<li>" +
+						// 	"<div class='avatar' id='avatarOhm'>" +
 								
-							"</div>" +
-							"<div class='name' id='usernameOhm'>" +
+						// 	"</div>" +
+						// 	"<div class='name' id='usernameOhm'>" +
 								
-							"</div>" +
-						"</li>" +
-						"<li style='margin-top:5px;'>" +
+						// 	"</div>" +
+						// "</li>" 
+						+ "<li style='margin-top:5px;'>" +
 							"<div class='box1'>" +
 								"<span style='background:url("+urlOhm+"images/folder.png) no-repeat;padding-left:20px;'>"+languageOhm.iconKeyword+"</span>" +
 							"</div>" +
@@ -431,8 +432,9 @@ function checkCookie() {
 									"<ul class='colorTableOhm'><li  onclick='changeColorFromPicker(this)' style='background:#FFF593;'></li><li  onclick='changeColorFromPicker(this)' style='background-color:#EA4E01;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#CD4803;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#E7002A;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#933907;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#7F8D98;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#AFAEB3;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#C80084;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#741186;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#1B0051;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#4F250D;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#240000;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#BBB1D6;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#3580C3;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#0059A9;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#003B77;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#5DC6F3;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#01A5EC;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#014EA0;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#2E1D87;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#0AB4CE;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#4EB693;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#2BAA5B;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#01994C;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#008991;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#C9D301;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#97C000;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#00A131;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#01832D;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#016821;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#012F08;'></li> 		<li  onclick='changeColorFromPicker(this)' style='background-color:#F1B0CE;'></li> 	</ul>" +
 									"<div class='none ohmcolor' onclick='openPicker()' style='background:#"+clOhm+";color:"+clOhm+"' ></div>" +
 								"</div>" +
-						"</li>" +
-						"<li><div class='box1'><a href='javascript:void(0)' onclick='logout(\"info\")'><span style='background:url("+urlOhm+"images/logout.png) no-repeat;padding-left:20px;'>"+languageOhm.iconLogout+"</span></a></div></li></ul>" +
+						"</li>" 
+						//+ "<li><div class='box1'><a href='javascript:void(0)' onclick='logout(\"info\")'><span style='background:url("+urlOhm+"images/logout.png) no-repeat;padding-left:20px;'>"+languageOhm.iconLogout+"</span></a></div></li>
+						+"</ul>" +
 			 "</div></div>");	
     } else {
     	var posOhm = "position: fixed";
