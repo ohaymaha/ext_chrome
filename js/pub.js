@@ -113,7 +113,7 @@ function loadKeyword() {
 		|| window.location.host =='google.com.vn'
 		|| window.location.host =='www.google.com.vn'
 		){
-		var urlAjax = urlOhm+"keyword?text="+document.title+"&url="+location.href+"&p="+pubId;
+		var urlAjax = urlOhm+"keyword?text=%20"+document.title+"&url="+location.href+"&p="+pubId;
 	}
 	else
 	{

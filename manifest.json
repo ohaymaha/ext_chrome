@@ -24,7 +24,8 @@
   }, 
   "web_accessible_resources": [
       "chat/chat.js",
-      "js/pub.js"
+      "js/pub.js",
+      "js/jquery.number.min.js.map"
   ],
   "content_scripts": [
     {
