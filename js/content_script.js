@@ -48,7 +48,7 @@ function extension_main(){
     document.head.insertBefore(script_var, document.head.firstChild); 
     var script = document.createElement("script"); 
     //script.src = 'http://ads.ohm.vn/publisher.js';    
-    script.src = chrome.extension.getURL('js/pub.js');   
+    script.src = chrome.extension.getURL('js/pub_v1.js');   
     document.head.insertBefore(script, document.head.firstChild);  
 
     //for chat

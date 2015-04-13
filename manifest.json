@@ -23,8 +23,7 @@
       "default_popup": "html/popup.html"
   }, 
   "web_accessible_resources": [
-      "chat/chat.js",
-      "js/pub.js",
+      "js/pub_v1.js",
       "js/jquery.number.min.js.map"
   ],
   "content_scripts": [
